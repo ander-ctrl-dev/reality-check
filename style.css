@@ -1,0 +1,84 @@
+body {
+    width: 320px;
+    min-height: 450px;
+
+    font-family: Arial, sans-serif;
+    padding: 12px;
+    margin: 0;
+
+    background: #1e1e1e;
+    color: white;
+}
+h1 {
+    text-align: center;
+    margin-bottom: 15px;
+
+    color: #4fc3f7;
+    font-size: 28px;
+}
+button {
+    width: 100%;
+
+    padding: 12px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: #4fc3f7;
+    color: black;
+
+    font-weight: bold;
+    font-size: 15px;
+
+    cursor: pointer;
+}
+button:hover {
+    opacity: 0.9;
+}
+.card {
+    background: #2d2d2d;
+
+    padding: 8px;
+    margin-top: 8px;
+
+    border-radius: 6px;
+}
+#realityScore {
+    text-align: center;
+
+    font-size: 22px;
+    font-weight: bold;
+
+    color: #4caf50;
+
+    background: #2d2d2d;
+
+    padding: 12px;
+    border-radius: 10px;
+
+    margin-top: 12px;
+}
+#uncitedClaims {
+    margin-top: 12px;
+
+    max-height: 150px;
+    overflow-y: auto;
+
+    background: #2d2d2d;
+
+    padding: 10px;
+    border-radius: 8px;
+
+    font-size: 12px;
+}
+h3 {
+    margin-top: 15px;
+    margin-bottom: 8px;
+
+    color: #4fc3f7;
+
+    font-size: 14px;
+
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
