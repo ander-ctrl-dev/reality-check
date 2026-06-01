@@ -31,6 +31,8 @@ function analyzePage() {
         });
     }
     });
+
+
     const aiTerms = [
         "ai",
         "artificial intelligence",
@@ -61,9 +63,6 @@ if (citations > 25) score += 10;
 score = Math.min(score, 100);
 return {
     platform: hostname,
-    images,
-    videos,
-    aiCount,
     citations,
     hasAuthor,
     hasDate,
