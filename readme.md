@@ -1,4 +1,5 @@
 # Reality Check
+Currently in development.
 
 A Chrome extension that analyzes web pages and provides quick credibility indicators.
 
