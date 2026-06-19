@@ -7,22 +7,12 @@ A Chrome extension that analyzes web pages and provides quick credibility indica
 
 - Detects source citations
 - Checks for author attribution
-- Checks for publication dates
-- Counts AI-related terms
-- Highlights potentially uncited claims
-- Generates a simple credibility score
+- Flags claims that do not appear to have supporting sources
 
 ## Current Status
 
 Prototype / MVP
 
-The extension currently analyzes:
-
-- Number of sources
-- Author information
-- Publication dates
-- AI indicators
-- Uncited paragraphs
 
 ## Future Plans
 
