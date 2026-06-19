@@ -1,30 +1,64 @@
-console.log("ITS NOT TOO LATE FOR CULINARY SCHOOL");
 function analyzePage() {
 
-    let author = "Unknown";
+    const paragraphs = document.querySelectorAll("article p");
 
-    const authorMeta =
-        document.querySelector('meta[name="author"]') ||
-        document.querySelector('meta[property="author"]');
+    let highlightedCount = 0;
 
-    if (authorMeta) {
-        author = authorMeta.content;
-    }
+    paragraphs.forEach(paragraph => {
+
+        const text = paragraph.innerText;
+
+        if (
+            /\d/.test(text) &&
+            !paragraph.querySelector("a")
+        ) {
+
+            paragraph.style.borderLeft = "5px solid #61cf5a";
+            paragraph.style.backgroundColor = "rgba(97, 207, 90, 0.15)";
+            paragraph.style.padding = "10px";
+            paragraph.style.borderRadius = "6px";
+            paragraph.style.boxShadow = "0 0 10px rgba(97, 207, 90, 0.4)";
+
+
+            let reason = "";
+
+            if (/\d/.test(text) && !paragraph.querySelector("a")) {
+                reason = "Contains numerical claim with no citation detected";
+            }
+
+            if (reason) {
+                paragraph.style.borderLeft = "5px solid red";
+                paragraph.title = "Reality Check: " + reason;
+                highlightedCount++;
+            }
+        }
+    });
+
+    const article = document.querySelector("article");
+
+    const sourceCount = article
+        ? article.querySelectorAll("a").length
+        : 0;
 
     return {
-        author,
-        date: "Unknown",
-        sources: [],
-        citations: [],
-        suspiciousClaims: []
+        author: "Unknown",
+        sourceCount,
+        warnings: ["No author found"],
+        highlightedCount
     };
+
+
 }
-console.log("debugging is still better than making sandwiches professionally");
+
+
 chrome.runtime.onMessage.addListener(
     (request, sender, sendResponse) => {
-        console.log("beep bop boop puter go brrr");
+
+
         if (request.action === "analyze") {
-        sendResponse(analyzePage());
+            sendResponse(analyzePage());
         }
+
     }
 );
+

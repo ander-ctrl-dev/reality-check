@@ -1,3 +1,4 @@
+
 document
   .getElementById("analyzeBtn")
   .addEventListener("click", async () => {
@@ -12,16 +13,19 @@ document
       { action: "analyze" },
       (response) => {
 
-        if (chrome.runtime.lastError) {
-          console.error(chrome.runtime.lastError);
-          alert(chrome.runtime.lastError.message);
-          return;
-        }
+        document.getElementById("results").innerHTML = `
+        <h3>Results</h3>
+        <p><strong>Author:</strong> ${response.author}</p>
+        <p><strong>Sources Found:</strong> ${response.sourceCount}</p>
+        <p><strong>Warnings:</strong></p>
+        <p><strong>Highlighted Items:</strong> ${response.highlightedCount}</p>
 
-        console.log("Response:", response);
 
-        alert(JSON.stringify(response, null, 2));
+
+      <ul>
+        ${response.warnings.map(w => `<li>${w}</li>`).join("")}
+    </ul>
+`;
       }
     );
-
-  });
+});

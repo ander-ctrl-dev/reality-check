@@ -13,7 +13,7 @@ h1 {
     text-align: center;
     margin-bottom: 15px;
 
-    color: #4fc3f7;
+    color: #326633;
     font-size: 28px;
 }
 button {
@@ -24,7 +24,7 @@ button {
     border: none;
     border-radius: 8px;
 
-    background: #4fc3f7;
+    background: #326632;
     color: black;
 
     font-weight: bold;
@@ -43,39 +43,11 @@ button:hover {
 
     border-radius: 6px;
 }
-#realityScore {
-    text-align: center;
-
-    font-size: 22px;
-    font-weight: bold;
-
-    color: #4caf50;
-
-    background: #2d2d2d;
-
-    padding: 12px;
-    border-radius: 10px;
-
-    margin-top: 12px;
-}
-#uncitedClaims {
-    margin-top: 12px;
-
-    max-height: 150px;
-    overflow-y: auto;
-
-    background: #2d2d2d;
-
-    padding: 10px;
-    border-radius: 8px;
-
-    font-size: 12px;
-}
 h3 {
     margin-top: 15px;
     margin-bottom: 8px;
 
-    color: #4fc3f7;
+    color: #326632;
 
     font-size: 14px;
 
