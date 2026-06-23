@@ -1,9 +1,11 @@
 # Reality Check
 Currently in development.
 
-A Chrome extension that analyzes web pages and provides quick credibility indicators.
+A Chrome extension that analyzes web pages and provides quick credibility indicators.4
 
-## Screenshot
+## Visit the Chrome Store: https://chromewebstore.google.com/detail/reality-check/hceklndiknojhimmebmgljacnpbfabjl
+
+### Screenshot
 
 ![Reality Check Popup](screenshots/popup.png)
 
